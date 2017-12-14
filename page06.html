@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta http-equiv="x-ua-compatible" content="ie=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<!-- Titolo della pagina -->
+		<title>Generations Sound</title>
+	<!-- CSS -->
+	<!-- CSS -->
+		<link rel="stylesheet" href="css/style2.css" />
+	<!-- Google Fonts -->
+	<!-- jQuery -->
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+	<!-- Javascript per colore e slideshow -->
+		<script src="../js/interaction.js"></script>
+
+	
+	</head>
+
+
+
+	<body>
+
+
+	<div class="animation ani-6">
+  <div class="circle cir-6" >
+  </div>
+</div>
+
+		<div class "sounds">
+		<audio controls autoplay loop>
+  			<source src="sounds/Sound06_grindr.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+		</div>
+
+		<div class="question">
+		<p> Do you remember this sound? </p>
+		<p class="answer"> <a href="page07.html" id="yes"> Yes </a>  
+		 <a  href="page07.html" id="no"> No </a> </p> 
+
+		</div>
+ <script>
+                  // Get 'yes' and 'no' links.
+                  const yes = document.getElementById('yes')
+                  const no = document.getElementById('no')
+
+                  // Save 'yes' answer.
+                  yes.addEventListener('click', (e) => {
+                    e.preventDefault() // Prevent page from jumping.
+                    window.localStorage.question6 = true // Store answer as true.
+                    window.open('page07.html', '_self') // Open page.
+                    return false // Prevent page from jumping before answer is stored.
+                  })
+
+                  // Save 'no' answer.
+                  no.addEventListener('click', (e) => {
+                    e.preventDefault() // Prevent page from jumping.
+                    window.localStorage.question6 = false // Store answer as false.
+                    window.open('page07.html', '_self') // Open page.
+                    return false // Prevent page from jumping before answer is stored.
+                  })
+                </script>
+
+
+	
+
+
+		<footer></footer>
+
+	</body>
+
+ </html>
